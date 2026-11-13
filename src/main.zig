@@ -2740,7 +2740,6 @@ pub const Msg = union(enum) {
     /// Copy the signed-in account's nprofile, which names the relays it
     /// publishes to, to the clipboard.
     copy_nprofile,
-    /// Copy the local secret key (nsec) to the clipboard.
     /// Ask to log out: show the confirmation.
     logout_request,
     /// Dismiss the logout confirmation.

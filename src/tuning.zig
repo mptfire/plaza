@@ -178,8 +178,10 @@ pub const secret_file_permissions: std.Io.File.Permissions = if (builtin.os.tag 
     .default_file
 else
     std.Io.File.Permissions.fromMode(0o600);
-// Effect keys for the two Settings clipboard copies (npub, nsec). Clipboard
-// effects share the effect key space, so these stay distinct from the timer key.
+// Effect keys for the Settings clipboard copies (npub, nevent, nprofile,
+// note text). There is deliberately no nsec copy: the key never enters
+// Plaza. Clipboard effects share the effect key space, so these stay
+// distinct from the timer key.
 pub const copy_npub_key: u64 = 100;
 pub const copy_nevent_key: u64 = 103;
 pub const copy_nprofile_key: u64 = 105;
